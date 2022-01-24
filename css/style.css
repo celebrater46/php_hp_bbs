@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+body{
+    font-size: 20px;
+    color: silver;
+    background-color: black;
+    text-align: center;
+}
+
+hr{
+    opacity: 0.5;
+}
+
+div.containter{
+    width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+span.name{
+    font-weight: bold;
+    color: goldenrod;
+}
