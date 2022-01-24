@@ -44,14 +44,6 @@ function get_comments($list){
                 <div class="form">
                     <label>
                     <span class="form">
-                        タイトル：
-                    </span>
-                        <input class="comment" type="text" name="title">
-                    </label>
-                </div>
-                <div class="form">
-                    <label>
-                    <span class="form">
                         内容：
                     </span>
                         <textarea class="comment" name="text"></textarea>
@@ -68,7 +60,6 @@ function get_comments($list){
                     <?php echo $comment->id; ?>:
                     <span class="name"><?php echo $comment->sender; ?><?php echo $comment->cap; ?></span>
                     <?php echo $comment->date_string; ?>
-                    [返信]
                 </p>
 <!--                <h2>--><?php //echo $comment->title; ?><!--</h2>-->
                 <div class="text">

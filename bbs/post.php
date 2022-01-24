@@ -22,6 +22,8 @@ $array = [
 add_log($array);
 save_text($array["id"]);
 
+header('Location: ../index.php');
+
 function h($s) {
     return htmlspecialchars($s, ENT_QUOTES, "UTF-8");
 }

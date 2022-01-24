@@ -22,7 +22,7 @@ class Comment
         $this->id = (int)$list_data[0];
         $this->reply = (int)$list_data[1];
         $this->date = $list_data[2];
-        $this->date_string = $list_data[2];
+        $this->date_string = $this->get_date_string($list_data[2]);
         $this->date_unix = $list_data[3];
         $this->sender = $list_data[4] === "" ? "名も無き投稿者" : $list_data[4];
         $this->title = $list_data[5] === "" ? "無題" : $list_data[5];
@@ -47,5 +47,11 @@ class Comment
         } else {
             $this->text = [$path . "が存在しないか、読み込めません。"];
         }
+    }
+
+    function get_date_string($date){
+        $temp = str_replace("-", "/", $date);
+        $temp = str_replace("_", " ", $temp);
+        return $temp;
     }
 }
