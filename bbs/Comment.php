@@ -10,15 +10,15 @@ class Comment
     public $sender; // 投稿者名
     public $title;
     public $text = []; // コメント内容
-    public $unique; // 2ch とかのなりすまし対策のトリップ
+    public $cap; // 2ch とかのなりすまし対策のトリップ
     public $hp; // 投稿者のホームページの URL
     public $mail; // 投稿者のメールアドレス
     public $ip; // 投稿者の IP アドレス
 
 //     function __construct($id, $reply, $date, $title, $sender){
     function __construct($line){
-//        2|1|2007/05/25(Fri) 04:01:07|名も無き投稿者|無題|wf9NFq8ibtbks|https://google.com/|hoge123@google.com|192.168.1.100|60|0
-//        $id|$reply|$date|$date_unix|$sender|$title|$text|$unique|$hp|$mail|$ip|0（改行コードによるバグ対策）
+//        12|11|2007/06/13(Wed) 00:23:15|1181661795|名も無き投稿者|無題|7I7Cj53d7YIoI|https://google.com/|hoge123@google.com|192.168.1.100|53|0
+//        $id|$reply|$date|$date_unix|$sender|$title|$text|$cap|$hp|$mail|$ip|0（改行コードによるバグ対策）
         $list_data = explode("|", $line);
         $this->id = (int)$list_data[0];
         $this->reply = (int)$list_data[1];
@@ -28,7 +28,7 @@ class Comment
         $this->sender = $list_data[4] === "" ? "名も無き投稿者" : $list_data[4];
 //            $this->title = $list_data[5];
         $this->title = $list_data[5] === "" ? "無題" : $list_data[5];
-        $this->unique = $list_data[6] === "" ? "----------" : $list_data[6];
+        $this->cap = $list_data[6] === "" ? "----------" : $list_data[6];
         $this->hp = $list_data[7];
         $this->mail = $list_data[8];
         $this->ip = $list_data[9];
@@ -43,7 +43,7 @@ class Comment
 //            $this->sender = null;
 //            $this->title = $list_data[0] . ".txt が存在しないか、読み込めません。";
 ////            $this->text = [$list_data[0] . ".txt が存在しないか、読み込めません。"];
-//            $this->unique = null;
+//            $this->cap = null;
 //            $this->hp = null;
 //            $this->mail = null;
 //            $this->ip = null;

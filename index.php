@@ -6,7 +6,7 @@ $title = "PHP HP BBS";
 
 $list = file("bbs/list.txt");
 $comments = get_comments($list);
-$comments = array_reverse($comments);
+//$comments = array_reverse($comments);
 
 function get_comments($list){
     $array = [];
@@ -27,11 +27,41 @@ function get_comments($list){
     <title><?php echo $title; ?></title>
 </head>
 <body>
-
     <div class="containter">
         <h1><?php echo $title; ?></h1>
         <p>作品の感想、アプリやゲームのバグ報告等あったらください。</p>
-        <p>当サイトに関係のない書き込みは IP ごとブロックします。</p>
+        <p>名前の後に #（半角シャープ）を追加し、任意の文字列を入れると、</p>
+        <p>なりすまし防止用の暗号キーが追加されます（2ch でいう「トリ」です）。</p>
+        <div class="form_box">
+            <form action="bbs/post.php" method="post">
+                <div class="form">
+                    <label>
+                    <span class="form">
+                        名前：
+                    </span>
+                        <input class="comment" type="text" name="name">
+                    </label>
+                </div>
+                <div class="form">
+                    <label>
+                    <span class="form">
+                        タイトル：
+                    </span>
+                        <input class="comment" type="text" name="title">
+                    </label>
+                </div>
+                <div class="form">
+                    <label>
+                    <span class="form">
+                        内容：
+                    </span>
+                        <textarea class="comment" name="text"></textarea>
+                    </label>
+                </div>
+                <div class="form"><button class="submit">送信！</button></div>
+            </form>
+        </div>
+
         <?php foreach ($comments as $comment) : ?>
             <div class="comment">
                 <hr>
@@ -39,7 +69,7 @@ function get_comments($list){
                     <?php echo $comment->id; ?>:
                     <span class="name"><?php echo $comment->sender; ?></span>
                     <?php echo $comment->date_string; ?>
-                    ID:<?php echo $comment->unique; ?>
+                    ID:<?php echo $comment->cap; ?>
                     [返信]
                 </p>
 <!--                <h2>--><?php //echo $comment->title; ?><!--</h2>-->

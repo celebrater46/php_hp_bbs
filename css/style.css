@@ -16,6 +16,18 @@ p{
     margin: 0 auto;
 }
 
+input {
+    font-size: 1rem;
+    color: #eeeeee;
+    background-color: #333333;
+}
+
+textarea {
+    font-size: 1rem;
+    color: #eeeeee;
+    background-color: #333333;
+}
+
 div.containter{
     width: 1000px;
     margin: 0 auto;
@@ -30,7 +42,41 @@ div.text{
     margin: 20px auto;
 }
 
+div.form_box{
+    margin: 50px auto;
+}
+
+div.form{
+    margin: 20px auto;
+}
+
+label{
+    display: flex;
+}
+
+span.form{
+    display: block;
+    width: 130px;
+}
+
 span.name{
     font-weight: bold;
     color: goldenrod;
+}
+
+input.comment{
+    width: 720px;
+}
+
+textarea.comment{
+    width: 720px;
+    height: 500px;
+}
+
+button.submit{
+    color: #eeeeee;
+    background-color: #333333;
+    width: 200px;
+    text-align: center;
+    margin: 0 auto 0 390px;
 }
