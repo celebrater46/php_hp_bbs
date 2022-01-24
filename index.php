@@ -6,12 +6,11 @@ $title = "PHP HP BBS";
 
 $list = file("bbs/list.txt");
 $comments = get_comments($list);
-//$comments = array_reverse($comments);
+rsort($comments); // 新しい投稿順
 
 function get_comments($list){
     $array = [];
     foreach ($list as $line){
-//        $temp = explode("|", $line);
         array_push($array, new Comment($line));
     }
     return $array;

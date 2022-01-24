@@ -22,22 +22,6 @@ $array = [
 add_log($array);
 save_text($array["id"]);
 
-//var_dump($array);
-
-//$id = get_id();
-//$reply = (int)$_POST["reply"];
-//$date =  date("Y-m-d_H:i:s"); // 2021-01-12 09:45:31
-//$date_unix = time();
-//$name_full = h($_POST["name"]);
-//$user = get_name($name_full);
-//$title = h($_POST["title"]);
-//$text = h($_POST["text"]);
-//$cap = get_cap($name_full);
-//$hp = "";
-//$mail = "";
-//$ip = $_SERVER['REMOTE_ADDR'];
-
-
 function h($s) {
     return htmlspecialchars($s, ENT_QUOTES, "UTF-8");
 }
@@ -55,7 +39,6 @@ function add_log($array){
 }
 
 function get_name($name){
-//    $name = h($_POST["name"]);
     $sharp = strpos($name, "#");
     if($sharp === false){
         return $name;
@@ -77,7 +60,6 @@ function get_cap($name){
 
     $cap = crypt($key, $salt);
     $cap = substr($cap, -10);
-//    $cap = '◆' . $cap;
 
     return $cap;
 }
@@ -92,17 +74,6 @@ function get_id(){
     rsort($array);
     return $array[0] + 1;
 }
-
-//function get_id_array($list){
-//    $array = [];
-//    foreach ($list as $line){
-//        $temp = explode("|", $line);
-//        array_push($array, (int)$temp[0]);
-//    }
-////    return sort($array);
-//    sort($array);
-//    return $array;
-//}
 
 function get_setting(){
     $settings = file("../setting.txt");
