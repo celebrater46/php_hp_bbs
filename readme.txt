@@ -29,4 +29,26 @@ MITライセンスでの配布となります。
 
 
 
+############################################################################################
+############################################################################################
+About PHP HP BBS (PHPHPBBS)
 
+##############################################
+Terms of service
+##############################################
+
+This "PHP HP BBS (PHPHPBBS)" is the App that I "Enin Fujimi" developed for exhibition my site.
+
+PHPHPBBS is MIT license.
+If specify a copyright, you can edit PHPHPBBS and give it out on the Web.
+I never take responsibility even if PHPHPBBS leads any troubles.
+
+I regard you accept this agreement as you start to use PHPHPBBS.
+
+If you find any bug, tell me it. I will fix the bugs, but I don't know when it resolves.
+
+PHPHPBBS is very simple and being developed quickly.
+If you change any folder name or mistake the syntax of each TXT files, PHPHPBBS will be not working. Be careful.
+
+
+Copyright (C) Enin Fujimi All Rights Reserved.
