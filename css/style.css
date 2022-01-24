@@ -17,6 +17,10 @@ div.containter{
     text-align: left;
 }
 
+div.comment{
+    margin: 0 auto 50px;
+}
+
 span.name{
     font-weight: bold;
     color: goldenrod;
