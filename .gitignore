@@ -1,1 +1,3 @@
-bbs/test/
+bbs/test/*.log
+bbs/test/*.txt
+bbs/test/comments/
