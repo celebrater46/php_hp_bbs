@@ -15,7 +15,7 @@ class Comment
     public $ip; // 投稿者の IP アドレス
 
 
-//    function __construct($id, $reply, $date, $title, $sender){
+//     function __construct($id, $reply, $date, $title, $sender){
     function __construct($line){
         // 2|1|2022-01-24_00:00:00|1255394956|名も無き者|テスト投稿|わははははははははは|yjLxrzJFriH9s|http://enin-world.sakura.ne.jp/|skmt.3b.kzm.knpch@gmail.com|192.168.1.100|0
         // $id|$reply|$date|$date_unix|$sender|$title|$text|$unique|$hp|$mail|$ip|0（改行コードによるバグ対策）
