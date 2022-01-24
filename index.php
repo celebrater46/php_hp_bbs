@@ -1,5 +1,7 @@
 <?php
 
+// Copyright (C) Enin Fujimi All Rights Reserved.
+
 require_once "bbs/Comment.php";
 
 $title = "PHP HP BBS";
@@ -22,6 +24,7 @@ function get_comments($list){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="Author" content="Enin Fujimi">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <title><?php echo $title; ?></title>
 </head>
