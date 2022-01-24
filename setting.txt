@@ -1,3 +1,5 @@
 max:5
 txt_mode:true
 no_name:名も無き住人
+no_title:名も無き投稿
+order:0
