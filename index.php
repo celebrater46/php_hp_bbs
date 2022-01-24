@@ -66,9 +66,8 @@ function get_comments($list){
                 <hr>
                 <p>
                     <?php echo $comment->id; ?>:
-                    <span class="name"><?php echo $comment->sender; ?></span>
+                    <span class="name"><?php echo $comment->sender; ?><?php echo $comment->cap; ?></span>
                     <?php echo $comment->date_string; ?>
-                    ID:<?php echo $comment->cap; ?>
                     [返信]
                 </p>
 <!--                <h2>--><?php //echo $comment->title; ?><!--</h2>-->

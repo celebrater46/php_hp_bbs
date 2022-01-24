@@ -26,7 +26,7 @@ class Comment
         $this->date_unix = $list_data[3];
         $this->sender = $list_data[4] === "" ? "名も無き投稿者" : $list_data[4];
         $this->title = $list_data[5] === "" ? "無題" : $list_data[5];
-        $this->cap = $list_data[6] === "" ? "----------" : $list_data[6];
+        $this->cap = $list_data[6] === "" ? "----------" : "◆" . $list_data[6];
         $this->hp = $list_data[7];
         $this->mail = $list_data[8];
         $this->ip = $list_data[9];

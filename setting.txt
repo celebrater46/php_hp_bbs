@@ -1,7 +1,1 @@
-max:5
-max_name_length:20
-max_title_length:24
-txt_mode:true
-no_name:名も無き住人
-no_title:名も無き投稿
 order:0
