@@ -11,6 +11,11 @@ hr{
     opacity: 0.5;
 }
 
+p{
+    line-height: 150%;
+    margin: 0 auto;
+}
+
 div.containter{
     width: 1000px;
     margin: 0 auto;
@@ -18,7 +23,11 @@ div.containter{
 }
 
 div.comment{
-    margin: 0 auto 50px;
+    margin: 50px auto 20px;
+}
+
+div.text{
+    margin: 20px auto;
 }
 
 span.name{

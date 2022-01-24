@@ -30,7 +30,8 @@ function get_comments($list){
 
     <div class="containter">
         <h1><?php echo $title; ?></h1>
-        <p>Hello World.</p>
+        <p>作品の感想、アプリやゲームのバグ報告等あったらください。</p>
+        <p>当サイトに関係のない書き込みは IP ごとブロックします。</p>
         <?php foreach ($comments as $comment) : ?>
             <div class="comment">
                 <hr>
@@ -45,6 +46,7 @@ function get_comments($list){
                 <div class="text">
                     <?php if($comment->reply !== 0 && $comment->reply !== "") : ?>
                         <p>&gt;&gt; <?php echo $comment->reply; ?></p>
+                        <p>　</p>
                     <?php endif; ?>
                     <?php foreach ($comment->text as $line) : ?>
                         <p><?php echo $line; ?></p>
