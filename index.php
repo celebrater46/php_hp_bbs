@@ -6,6 +6,7 @@ $title = "PHP HP BBS";
 
 $list = file("bbs/list.txt");
 $comments = get_comments($list);
+$comments = array_reverse($comments);
 
 function get_comments($list){
     $array = [];
