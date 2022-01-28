@@ -19,10 +19,13 @@ $array = [
     "ip" => $_SERVER['REMOTE_ADDR']
 ];
 
-add_log($array);
-save_text($array["id"]);
-
-header('Location: ../index.php');
+$bool = save_text($array["id"]);
+if($bool){
+    add_log($array);
+    header('Location: error.php?code=1');
+} else {
+    header('Location: ../index.php');
+}
 
 function h($s) {
     return htmlspecialchars($s, ENT_QUOTES, "UTF-8");
@@ -31,8 +34,18 @@ function h($s) {
 function save_text($id){
     $text = h($_POST["text"]);
     $path = "comments/" . $id . ".txt";
-    error_log($text, 3, $path);
+    $len = mb_strlen($text, "UTF-8");
+    if($len <= 2000){
+        error_log($text, 3, $path);
+        return true;
+    } else {
+        return false;
+    }
 }
+
+//function check_strlen($text){
+//    $len = mb_strlen($text, "UTF-8");
+//}
 
 function add_log($array){
     $path = "list.txt";
