@@ -22,9 +22,9 @@ $array = [
 $bool = save_text($array["id"]);
 if($bool){
     add_log($array);
-    header('Location: error.php?code=1');
-} else {
     header('Location: ../index.php');
+} else {
+    header('Location: error.php?code=1');
 }
 
 function h($s) {

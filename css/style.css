@@ -7,6 +7,15 @@ body{
     text-align: center;
 }
 
+a{
+    color: goldenrod;
+    text-decoration: none;
+}
+
+a:hover{
+    color: gold;
+}
+
 hr{
     opacity: 0.5;
 }
